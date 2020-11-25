@@ -4,9 +4,10 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/automuteus/galactus/broker"
 	"strings"
 	"time"
+
+	"github.com/automuteus/galactus/broker"
 
 	"github.com/denverquane/amongusdiscord/game"
 	"github.com/denverquane/amongusdiscord/storage"
@@ -27,7 +28,7 @@ func helpResponse(isAdmin, isPermissioned bool, CommandPrefix string, commands [
 		}),
 		Description: sett.LocalizeMessage(&i18n.Message{
 			ID:    "responses.helpResponse.SubTitle",
-			Other: "[View the Github Project](https://github.com/denverquane/automuteus) or [Join our Discord](https://discord.gg/ZkqZSWF)\n\nType `{{.CommandPrefix}} help <command>` to see more details on a command!",
+			Other: "[View the Github Project](https://github.com/notashelf/automuteus)\n\nType `{{.CommandPrefix}} help <command>` to see more details on a command!",
 		},
 			map[string]interface{}{
 				"CommandPrefix": CommandPrefix,
