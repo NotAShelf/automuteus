@@ -23,10 +23,9 @@ services:
       - POSTGRES_PASS=${POSTGRES_PASS:?err}
 
       # These Variables are optional
-      - WORKER_BOT_TOKENS=${WORKER_BOT_TOKENS:-}
+      - DISCORD_BOT_TOKEN_2=${DISCORD_BOT_TOKEN_2:-}
       - EMOJI_GUILD_ID=${EMOJI_GUILD_ID:-}
       - CAPTURE_TIMEOUT=${CAPTURE_TIMEOUT:-}
-      - AUTOMUTEUS_LISTENING=${AUTOMUTEUS_LISTENING:-}
 
       # Do **NOT** change this
       - REDIS_ADDR=${AUTOMUTEUS_REDIS_ADDR}
@@ -60,7 +59,7 @@ services:
       - "redis-data:/data"
 
   postgres:
-    image: postgres:12-alpine
+    image: postgres:12
     restart: always
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
@@ -69,6 +68,6 @@ services:
       - "postgres-data:/var/lib/postgresql/data"
 
 volumes:
-  bot-logs:
-  redis-data:
-  postgres-data:
+  bot-logs: 
+  redis-data: 
+  postgres-data: 
